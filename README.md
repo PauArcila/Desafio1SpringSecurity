@@ -1,4 +1,4 @@
-# Desafio1SpringSecurity
+# SpringSecurity_CredencialesBodega
 Desafío: Administrador de Bodega
 
 Este desafío consistió en desarrollar una aplicación para administrar los ingresos de materiales a una bodega. 

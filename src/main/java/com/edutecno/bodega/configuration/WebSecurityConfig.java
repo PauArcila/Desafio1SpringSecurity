@@ -26,7 +26,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		auth.inMemoryAuthentication()
 			.withUser("operador1")
 			.password(passwordEncoder().encode("1234"))
-			.roles("BODEGA")
+			.roles("MATERIALES")//BODEGA
 			.and()
 			.withUser("operador2")
 			.password(passwordEncoder().encode("1234"))
@@ -37,7 +37,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	public void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable()
 			.authorizeRequests()
-			.antMatchers("/materiales/**").hasRole("BODEGA")
+			.antMatchers("/materiales/**").hasRole("MATERIALES")//MATERIALES
 			.antMatchers("/login").permitAll()
 			.antMatchers("/").permitAll()
 			.anyRequest().authenticated()
